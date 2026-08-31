@@ -4,9 +4,6 @@
   margin: 0;
   padding: 0; 
 }
-html {
-  font-size: 62.5%;
-}
 
 /* Variables */ 
 :root {
@@ -17,34 +14,46 @@ html {
   --font-main: 'Figtree', sans-serif;
 }
 
-/* Global Styles */
+/* Base Body (Centrado perfecto) */
 body {
   font-family: var(--font-main);
-  font-size: 1.4rem;
+  font-size: 0.875rem; /* 14px */
   line-height: 1.5;
+  background-color: var(--yellow);
+  min-height: 100vh;
+  
+  /* CSS Grid para aislar el centrado del main del footer */
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-items: center;
+}
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: var(--yellow);
-  flex-direction: column;
+  width: 100%;
+  padding-block: 1.5rem;
 }
 
+/* Tarjeta */
 .card {
   background-color: var(--white);
   border-radius: 20px;
   box-shadow: 8px 8px 0px 0px var(--grey-950);
   overflow: hidden;
-  max-width: 384px;
-  min-width: 327px;
-  width:calc(100vw - 4.8rem);
-  padding: 2.4rem;
+  max-width: 24rem; /* 384px */
+  min-width: 20.4375rem; /* 327px */
+  width: calc(100vw - 3rem);
+  padding: 1.5rem;
   border: 1px solid var(--grey-950);
 }
+
 .card-img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 2.4rem;
+  margin-block-end: 1.5rem;
   display: block;
 }
 
@@ -53,48 +62,60 @@ body {
   font-weight: 800;
   text-decoration: none;
   background-color: var(--yellow);
-  padding: 0.4rem 1.2rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 4px;
   display: inline-block;
 }
+
 .date {
   color: var(--grey-950);
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
+  margin-block: 0.75rem;
   font-weight: 500;
 }
+
 .title {
-  margin:0;
+  margin: 0;
 }
+
 .title-link {
   color: var(--grey-950);
-  font-size: 2.4rem;
+  font-size: 1.5rem; /* 24px */
   font-weight: 800;
-  margin-bottom: 1.2rem;
+  margin-block-end: 0.75rem;
   text-decoration: none;
   display: inline-block;
 }
+
 .title-link:hover {
   color: var(--yellow);
   cursor: pointer;
 }
+
 .description {
   color: var(--grey-500);
-  font-size: 1.6rem;
-  margin-bottom: 2.4rem;
+  font-size: 1rem; /* 16px */
+  margin-block-end: 1.5rem;
 }
+
 .author-info {
   display: flex;
   align-items: center;
   font-weight: 800;
   color: var(--grey-950);
 }
+
 .avatar {
-  width: 3.2rem;
-  margin-right: 1.2rem;
+  width: 2rem; /* 32px */
+  margin-inline-end: 0.75rem;
 }
+
+/* Footer libre de interferencias */
 footer {
   color: var(--grey-500);
   text-align: center;
-  margin-top:3rem;
+  padding-block-end: 1rem;
+}
+
+footer a {
+  color: var(--grey-950);
 }
