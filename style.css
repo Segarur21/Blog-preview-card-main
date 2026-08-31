@@ -1,11 +1,9 @@
-/* CSS Reset */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0; 
 }
-
-/* Variables */ 
 :root {
   --yellow: hsl(47, 88%, 63%);
   --white: hsl(0, 0%, 100%);
@@ -14,15 +12,12 @@
   --font-main: 'Figtree', sans-serif;
 }
 
-/* Base Body (Centrado perfecto) */
 body {
   font-family: var(--font-main);
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem; 
   line-height: 1.5;
   background-color: var(--yellow);
   min-height: 100vh;
-  
-  /* CSS Grid para aislar el centrado del main del footer */
   display: grid;
   grid-template-rows: 1fr auto;
   align-items: center;
@@ -37,14 +32,14 @@ main {
   padding-block: 1.5rem;
 }
 
-/* Tarjeta */
+
 .card {
   background-color: var(--white);
   border-radius: 20px;
   box-shadow: 8px 8px 0px 0px var(--grey-950);
   overflow: hidden;
-  max-width: 24rem; /* 384px */
-  min-width: 20.4375rem; /* 327px */
+  max-width: 24rem; 
+  min-width: 20.4375rem; 
   width: calc(100vw - 3rem);
   padding: 1.5rem;
   border: 1px solid var(--grey-950);
@@ -79,7 +74,7 @@ main {
 
 .title-link {
   color: var(--grey-950);
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.5rem;
   font-weight: 800;
   margin-block-end: 0.75rem;
   text-decoration: none;
@@ -93,7 +88,7 @@ main {
 
 .description {
   color: var(--grey-500);
-  font-size: 1rem; /* 16px */
+  font-size: 1rem; 
   margin-block-end: 1.5rem;
 }
 
@@ -105,11 +100,11 @@ main {
 }
 
 .avatar {
-  width: 2rem; /* 32px */
+  width: 2rem;
   margin-inline-end: 0.75rem;
 }
 
-/* Footer libre de interferencias */
+
 footer {
   color: var(--grey-500);
   text-align: center;

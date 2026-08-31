@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Blog Preview Card Solution](./assets/images/00_screenshot.png)
+![Blog Preview Card Solution](./assets/images/screenshot.png)
 
 ### Links
 
